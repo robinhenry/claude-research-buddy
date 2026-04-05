@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Data
+*.npz
+*.npy
+.env
+
+# User-specific (created during setup, not part of the tool)
+research/research-context.md
+research/problem-repository.md
+
+# Projects and library — independent repos / user data
+projects/
+library

@@ -1,0 +1,14 @@
+[project]
+name = "research-buddy"
+version = "0.1.0"
+description = "Buddy — autonomous research partner"
+authors = []
+
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core>=1.3.0"]
+build-backend = "poetry.core.masonry.api"
