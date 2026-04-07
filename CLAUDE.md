@@ -8,8 +8,10 @@ First-time users: run `scripts/setup.sh` to create your research context, librar
 
 ## Structure
 
-- `.claude/skills/` — research skills: lit-review, reassess, plan, theory, experiment, write, critique, brainstorm, pipeline, ingest-paper
+- `.claude/skills/` — research skills: lit-review, reassess, plan, theory, experiment, write, critique, brainstorm, pipeline, ingest-paper, ingest-blog, sync-zotero
+- **Zotero is the master library.** Add papers to Zotero (manually, via Litmaps sync, browser connector); `/sync-zotero` pulls eligible items into `library/` for full extraction. Tag a Zotero item `lib:skip` to exclude it, `lib:print` to also stage the PDF in `library/to-print/`. `library/papers/<citekey>/` folders use Better BibTeX citekeys for a 1:1 mapping with Zotero.
 - `library/` — paper library (symlink or local dir, created during setup). Each paper has `summary.md` (overview) and `extracted.md` (full structured extraction) — read `extracted.md` when you need specific details, equations, or results beyond the summary. Bib entries (with keywords) in `library/library.bib`. Canonical keyword list in `library/keywords.txt`.
+- `library/blogs/` — ingested blog posts and essays. Each has `source.md` (fetched markdown) and `summary.md`. Indexed in `library/blogs/blogs.index.md`. **Background reading only** — never cited as references in formal paper writeups, never added to `library.bib`.
 - `projects/<name>/` — one folder per research problem. Each is an **independent git repo**.
 - `research/research-context.md` — researcher expertise, lab capabilities, problem selection criteria
 - `research/problem-repository.md` — running list of important open problems

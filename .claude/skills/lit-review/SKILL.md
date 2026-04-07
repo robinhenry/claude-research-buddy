@@ -11,7 +11,7 @@ Read `research/research-context.md` to filter for relevance throughout. Use `scr
 ## Strategy — work outward from what you know
 
 1. **Survey papers first.** Search for reviews on the topic — they map the landscape and give a curated bibliography to chase.
-2. **Seeds from library.** Grep `library/library.bib` by keyword/title. Read matching `summary.md` files.
+2. **Seeds from library.** Grep `library/library.bib` by keyword/title. Read matching `summary.md` files. Also grep `library/blogs/blogs.index.md` and read relevant blog `summary.md` files — blogs are background context only, do NOT include them in reference lists or citation graphs (they have no `library.bib` entry).
 3. **Citation graphs.** For each seed: fetch refs and cited-by (limit to top 20 by citation count). For the 2–3 most central papers found, go a second hop. This is the highest-value step.
 4. **Recommendations.** Use `similar` (single paper or `--from-bib` with keyword filter) for papers the graph missed.
 5. **Keyword search.** Fill remaining gaps. Try diverse formulations — same concept, different names across fields. S2 has better relevance than OpenAlex for niche queries.

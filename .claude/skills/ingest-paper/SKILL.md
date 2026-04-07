@@ -14,7 +14,9 @@ description: "Ingest research paper PDFs into the library. Use when the user say
 
 2. **Read the PDF** using the Read tool (page chunks for >10 pages). Read the entire paper. **Only extract what is in the PDF** — never reconstruct from training data.
 
-3. **Create `library/papers/<author-YYYY-keyword>/`** (e.g., `brunton-2016-sindy`) with:
+2.5. **Pick the bib key.** If a sidecar `<pdf-stem>.citekey` file exists next to the PDF (written by `/sync-zotero`), use its contents as the bib key. Otherwise generate one in the `<author-YYYY-keyword>` scheme below.
+
+3. **Create `library/papers/<bib-key>/`** (e.g., `brunton-2016-sindy` or the BBT citekey from the sidecar) with:
    - `paper.pdf` — copy of the original
    - `extracted.md` — complete structured extraction. Paraphrase prose (don't copy verbatim). Preserve equations, tables, figure captions.
    - `summary.md` — following `library/TEMPLATE.md` format. In "Notes & open questions", grep the library for related papers and note connections. If the paper highlights or makes tractable any important open problems (read `research/research-context.md` for what matters to us), append them to `research/problem-repository.md`.
@@ -23,6 +25,6 @@ description: "Ingest research paper PDFs into the library. Use when the user say
 
 5. **Append to `library/ingestion-log.md`**: `- YYYY-MM-DD: <bib-key> — <paper title>`
 
-6. **Clean up:** `mv "<pdf>" library/inbox/.processed/`
+6. **Clean up:** `mv "<pdf>" library/inbox/.processed/` and `rm -f library/inbox/<pdf-stem>.citekey` if the sidecar exists.
 
 7. **Commit and push:** `cd library && git add papers/<bib-key>/ library.bib keywords.txt ingestion-log.md && git commit -m "Ingest: <bib-key>" && git push`

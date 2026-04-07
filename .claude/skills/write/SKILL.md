@@ -15,7 +15,7 @@ Read `plan.md` to understand the target audience.
 ## Writing
 
 - Every claim cites an experiment or derivation
-- Only cite papers from `library/library.bib`. Cite primary sources. Never fabricate.
+- Only cite papers from `library/library.bib`. Cite primary sources. Never fabricate. `library/blogs/` is off-limits as a reference source — blogs are background reading only.
 - If you believe you're missing key or primary references that should be cited, request them.
 - Prioritize simplicity and a clear story.
 - Check `plan.md` for target venue or format requirements. If none specified, use a sensible default (e.g., `latexmk -pdf`).
